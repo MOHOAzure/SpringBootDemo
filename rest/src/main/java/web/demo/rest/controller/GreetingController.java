@@ -1,4 +1,4 @@
-package web.demo.rest;
+package web.demo.rest.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import web.demo.rest.model.Greeting;
 
 @RestController
 public class GreetingController {
@@ -19,8 +21,6 @@ public class GreetingController {
 	public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
-	
-
 	
 	@PostMapping("/hello")
 	public String create() {

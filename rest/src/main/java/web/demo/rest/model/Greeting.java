@@ -1,4 +1,4 @@
-package web.demo.rest;
+package web.demo.rest.model;
 
 public class Greeting {
 	private final long id;
