@@ -14,8 +14,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import web.demo.rest.ProductRepository;
 import web.demo.rest.model.Product;
+import web.demo.rest.repo.ProductRepository;
  
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
